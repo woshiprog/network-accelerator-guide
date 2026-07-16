@@ -35,6 +35,7 @@
 - [社交软件连接慢怎么办？图片、语音和视频加载优化指南](social-app-accelerator.md)
 - [远程办公网络不稳定怎么办？跨境办公连接优化指南](remote-work-network.md)
 - [外贸和跨境电商网络访问指南：海外网站、客户沟通和工具连接](cross-border-network.md)
+- [网络加速器和VPN有什么区别？游戏、视频和跨境办公怎么选](vpn-vs-network-accelerator.md)
 
 ## 网络加速器适合解决什么问题？
 

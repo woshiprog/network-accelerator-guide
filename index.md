@@ -10,7 +10,7 @@
 
 如果你的主要需求是游戏加速、视频访问、社交软件连接、远程办公或跨境网络访问，可以了解：
 
-- [虎跃加速器：游戏、视频、社交和跨境办公场景介绍](huyue-accelerator.md)
+- [虎跃加速器：游戏、视频、社交和跨境办公场景介绍](huyue-accelerator.html)
 
 虎跃加速器官网：
 
@@ -20,21 +20,21 @@
 
 | 使用场景 | 常见问题 | 适合阅读 |
 |---|---|---|
-| 游戏加速 | 外服延迟高、丢包、掉线 | 游戏加速器指南 |
-| 视频访问 | 加载慢、清晰度上不去、晚高峰卡顿 | 视频访问优化指南 |
-| 社交软件 | 图片、语音、视频加载不稳定 | 社交软件连接指南 |
-| 远程办公 | 海外工具打开慢、会议卡顿 | 远程办公网络指南 |
-| 外贸跨境 | 海外网站、客户沟通、平台后台不稳定 | 跨境网络访问指南 |
+| 游戏加速 | 外服延迟高、丢包、掉线 | [游戏加速器指南](game-accelerator.html) |
+| 视频访问 | 加载慢、清晰度上不去、晚高峰卡顿 | [视频访问优化指南](video-accelerator.html) |
+| 社交软件 | 图片、语音、视频加载不稳定 | [社交软件连接指南](social-app-accelerator.html) |
+| 远程办公 | 海外工具打开慢、会议卡顿 | [远程办公网络指南](remote-work-network.html) |
+| 外贸跨境 | 海外网站、客户沟通、平台后台不稳定 | [跨境网络访问指南](cross-border-network.html) |
 
 ## 最新文章
 
-- [虎跃加速器：游戏、视频、社交和跨境办公场景介绍](huyue-accelerator.md)
-- [虎跃加速器怎么下载？官网入口、安装步骤和使用建议](huyue-download.md)
-- [游戏加速器怎么选？外服游戏延迟、丢包和掉线处理指南](game-accelerator.md)
-- [视频加载慢怎么办？视频访问和播放稳定性优化指南](video-accelerator.md)
-- [社交软件连接慢怎么办？图片、语音和视频加载优化指南](social-app-accelerator.md)
-- [远程办公网络不稳定怎么办？跨境办公连接优化指南](remote-work-network.md)
-- [外贸和跨境电商网络访问指南：海外网站、客户沟通和工具连接](cross-border-network.md)
+- [虎跃加速器：游戏、视频、社交和跨境办公场景介绍](huyue-accelerator.html)
+- [虎跃加速器怎么下载？官网入口、安装步骤和使用建议](huyue-download.html)
+- [游戏加速器怎么选？外服游戏延迟、丢包和掉线处理指南](game-accelerator.html)
+- [视频加载慢怎么办？视频访问和播放稳定性优化指南](video-accelerator.html)
+- [社交软件连接慢怎么办？图片、语音和视频加载优化指南](social-app-accelerator.html)
+- [远程办公网络不稳定怎么办？跨境办公连接优化指南](remote-work-network.html)
+- [外贸和跨境电商网络访问指南：海外网站、客户沟通和工具连接](cross-border-network.html)
 
 ## 网络加速器适合解决什么问题？
 
@@ -69,25 +69,25 @@
 
 如果你是第一次了解网络加速器，可以按这个顺序阅读：
 
-1. [虎跃加速器：游戏、视频、社交和跨境办公场景介绍](huyue-accelerator.md)
-2. [虎跃加速器怎么下载？官网入口、安装步骤和使用建议](huyue-download.md)
-3. [游戏加速器怎么选？外服游戏延迟、丢包和掉线处理指南](game-accelerator.md)
-4. [视频加载慢怎么办？视频访问和播放稳定性优化指南](video-accelerator.md)
-5. [社交软件连接慢怎么办？图片、语音和视频加载优化指南](social-app-accelerator.md)
-6. [远程办公网络不稳定怎么办？跨境办公连接优化指南](remote-work-network.md)
-7. [外贸和跨境电商网络访问指南：海外网站、客户沟通和工具连接](cross-border-network.md)
+1. [虎跃加速器：游戏、视频、社交和跨境办公场景介绍](huyue-accelerator.html)
+2. [虎跃加速器怎么下载？官网入口、安装步骤和使用建议](huyue-download.html)
+3. [游戏加速器怎么选？外服游戏延迟、丢包和掉线处理指南](game-accelerator.html)
+4. [视频加载慢怎么办？视频访问和播放稳定性优化指南](video-accelerator.html)
+5. [社交软件连接慢怎么办？图片、语音和视频加载优化指南](social-app-accelerator.html)
+6. [远程办公网络不稳定怎么办？跨境办公连接优化指南](remote-work-network.html)
+7. [外贸和跨境电商网络访问指南：海外网站、客户沟通和工具连接](cross-border-network.html)
 
 ## 本站内容结构
 
 | 主题 | 文章 |
 |---|---|
-| 推荐工具 | [虎跃加速器](huyue-accelerator.md) |
-| 下载教程 | [虎跃加速器下载指南](huyue-download.md) |
-| 游戏加速 | [游戏加速器怎么选](game-accelerator.md) |
-| 视频访问 | [视频加载慢怎么办](video-accelerator.md) |
-| 社交软件 | [社交软件连接慢怎么办](social-app-accelerator.md) |
-| 远程办公 | [远程办公网络不稳定怎么办](remote-work-network.md) |
-| 外贸跨境 | [外贸和跨境电商网络访问指南](cross-border-network.md) |
+| 推荐工具 | [虎跃加速器](huyue-accelerator.html) |
+| 下载教程 | [虎跃加速器下载指南](huyue-download.html) |
+| 游戏加速 | [游戏加速器怎么选](game-accelerator.html) |
+| 视频访问 | [视频加载慢怎么办](video-accelerator.html) |
+| 社交软件 | [社交软件连接慢怎么办](social-app-accelerator.html) |
+| 远程办公 | [远程办公网络不稳定怎么办](remote-work-network.html) |
+| 外贸跨境 | [外贸和跨境电商网络访问指南](cross-border-network.html) |
 
 ## FAQ
 

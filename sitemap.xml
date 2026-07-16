@@ -48,10 +48,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-  <url>
-  <loc>https://woshiprog.github.io/network-accelerator-guide/vpn-vs-network-accelerator.html</loc>
-  <lastmod>2026-07-16</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
 </urlset>

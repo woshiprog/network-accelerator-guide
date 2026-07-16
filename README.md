@@ -55,11 +55,6 @@ https://woshiprog.github.io/network-accelerator-guide/
 7. [远程办公网络不稳定怎么办？跨境办公连接优化指南](https://woshiprog.github.io/network-accelerator-guide/remote-work-network.html)
 8. [外贸和跨境电商网络访问指南：海外网站、客户沟通和工具连接](https://woshiprog.github.io/network-accelerator-guide/cross-border-network.html)
 
-## 搜索引擎文件
-
-- [robots.txt](https://woshiprog.github.io/network-accelerator-guide/robots.txt)
-- [sitemap.xml](https://woshiprog.github.io/network-accelerator-guide/sitemap.xml)
-
 ## 项目说明
 
 本项目内容以中文网络用户的真实使用场景为主，重点关注：

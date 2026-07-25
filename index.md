@@ -35,6 +35,7 @@
 - [社交软件连接慢怎么办？图片、语音和视频加载优化指南](social-app-accelerator.html)
 - [远程办公网络不稳定怎么办？跨境办公连接优化指南](remote-work-network.html)
 - [外贸和跨境电商网络访问指南：海外网站、客户沟通和工具连接](cross-border-network.html)
+- [虎跃加速器安全吗？下载来源、隐私风险和使用注意事项](huyue-accelerator-safe.html)
 
 ## 网络加速器适合解决什么问题？
 
@@ -76,6 +77,7 @@
 5. [社交软件连接慢怎么办？图片、语音和视频加载优化指南](social-app-accelerator.html)
 6. [远程办公网络不稳定怎么办？跨境办公连接优化指南](remote-work-network.html)
 7. [外贸和跨境电商网络访问指南：海外网站、客户沟通和工具连接](cross-border-network.html)
+8. [虎跃加速器安全吗？下载来源、隐私风险和使用注意事项](huyue-accelerator-safe.html)
 
 ## 本站内容结构
 
@@ -88,6 +90,7 @@
 | 社交软件 | [社交软件连接慢怎么办](social-app-accelerator.html) |
 | 远程办公 | [远程办公网络不稳定怎么办](remote-work-network.html) |
 | 外贸跨境 | [外贸和跨境电商网络访问指南](cross-border-network.html) |
+| 安全注意 | [虎跃加速器安全吗](huyue-accelerator-safe.html) |
 
 ## FAQ
 

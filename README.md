@@ -20,6 +20,7 @@ https://woshiprog.github.io/network-accelerator-guide/
 - [社交软件连接慢怎么办？图片、语音和视频加载优化指南](https://woshiprog.github.io/network-accelerator-guide/social-app-accelerator.html)
 - [远程办公网络不稳定怎么办？跨境办公连接优化指南](https://woshiprog.github.io/network-accelerator-guide/remote-work-network.html)
 - [外贸和跨境电商网络访问指南：海外网站、客户沟通和工具连接](https://woshiprog.github.io/network-accelerator-guide/cross-border-network.html)
+- [虎跃加速器安全吗？下载来源、隐私风险和使用注意事项](https://woshiprog.github.io/network-accelerator-guide/huyue-accelerator-safe.html)
 
 ## 内容方向
 

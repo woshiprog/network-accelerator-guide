@@ -1,12 +1,38 @@
-title: 网络加速器指南
-description: 虎跃加速器与网络加速器使用指南，介绍下载来源检查、安装与节点选择、安全风险、连接故障排查，以及游戏、视频、社交软件、远程办公和跨境网络访问等常见场景。
-lang: zh-CN
-url: https://woshiprog.github.io
-baseurl: /network-accelerator-guide
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
+  {% seo %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+  <style>
+    .site-navigation {
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+
+    .site-navigation a {
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="container-lg px-3 site-navigation">
+    <nav aria-label="网站导航">
+      <a href="{{ '/' | relative_url }}">网络加速器指南</a>
+    </nav>
+  </header>
+
+  <main class="container-lg px-3 my-5 markdown-body">
+    {{ content }}
+  </main>
+</body>
+</html>

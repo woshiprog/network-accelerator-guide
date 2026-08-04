@@ -220,3 +220,5 @@
 - [游戏加速器怎么选？外服游戏延迟、丢包和掉线处理指南](game-accelerator.html)
 - [视频加载慢怎么办？视频访问和播放稳定性优化指南](video-accelerator.html)
 - [远程办公网络不稳定怎么办？跨境办公连接优化指南](remote-work-network.html)
+
+准备安装或开始使用前，可以查看[虎跃加速器使用教程](huyue-how-to-use.html)，了解下载来源检查、应用权限、线路选择和连接故障排查方法。

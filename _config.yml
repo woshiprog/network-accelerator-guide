@@ -6,12 +6,6 @@ baseurl: /network-accelerator-guide
 
 defaults:
   - scope:
-      path: "index.md"
-    values:
-      title: "网络加速器指南"
-      layout: "default"
-
-  - scope:
       path: ""
       type: "pages"
     values:

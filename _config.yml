@@ -3,6 +3,8 @@ description: "虎跃加速器与网络加速器使用指南，介绍下载来源
 lang: "zh-CN"
 url: "https://woshiprog.github.io"
 baseurl: "/network-accelerator-guide"
+url: "https://network-troubleshooting-guide.pages.dev"
+baseurl: ""
 
 defaults:
   - scope:

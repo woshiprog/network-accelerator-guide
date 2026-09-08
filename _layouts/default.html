@@ -13,7 +13,6 @@
   <meta name="description" content="{{ page_description | escape }}">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="{{ canonical_url }}">
-
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
   <meta property="og:site_name" content="{{ site.title | escape }}">
@@ -22,7 +21,6 @@
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/network-accelerator-hero.webp">
   <meta name="twitter:card" content="summary_large_image">
-
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.github.build_revision | default: '1' }}">
 
   <script type="application/ld+json">
@@ -32,22 +30,16 @@
     "name": {{ page_title | jsonify }},
     "description": {{ page_description | jsonify }},
     "url": {{ canonical_url | jsonify }},
-    "inLanguage": "zh-CN",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": {{ site.title | jsonify }},
-      "url": {{ site.url | append: site.baseurl | append: '/' | jsonify }}
-    }
+    "inLanguage": "zh-CN"
   }
   </script>
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BGKXB89FFL"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer=window.dataLayer||[];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-BGKXB89FFL');
+    gtag('js',new Date());
+    gtag('config','G-BGKXB89FFL');
   </script>
 </head>
 
@@ -59,16 +51,12 @@
     <div class="header-inner">
       <a class="brand" href="{{ '/' | relative_url }}" aria-label="网络加速器指南首页">
         <span class="brand-mark" aria-hidden="true">N</span>
-        <span class="brand-copy">
-          <strong>网络加速器指南</strong>
-          <small>连接、测试与排查</small>
-        </span>
+        <span class="brand-copy"><strong>网络加速器指南</strong><small>连接、测试与排查</small></span>
       </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="打开导航菜单">
+      <button class="menu-toggle" type="button" aria-expanded="false"
+              aria-controls="site-navigation" aria-label="打开导航菜单">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="site-nav" id="site-navigation" aria-label="主要导航">
         <a href="{{ '/huyue-how-to-use.html' | relative_url }}">新手使用</a>
         <a href="{{ '/huyue-download.html' | relative_url }}">下载检查</a>
@@ -86,7 +74,7 @@
     <div class="footer-inner">
       <div>
         <a class="footer-brand" href="{{ '/' | relative_url }}">网络加速器指南</a>
-        <p>从下载检查到真实场景测试，帮你更清楚地判断连接工具是否适合自己的网络环境。</p>
+        <p>从下载检查到真实场景测试，帮你判断连接工具是否适合自己的网络环境。</p>
       </div>
       <nav aria-label="页脚导航">
         <a href="{{ '/video-accelerator.html' | relative_url }}">视频访问</a>
@@ -99,30 +87,21 @@
   </footer>
 
   <script>
-    (function () {
-      var header = document.querySelector('[data-site-header]');
-      var toggle = document.querySelector('.menu-toggle');
-      var nav = document.getElementById('site-navigation');
-      var progress = document.querySelector('.reading-progress span');
-      function update() {
-        var top = window.scrollY || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - window.innerHeight;
-        header.classList.toggle('is-scrolled', top > 12);
-        progress.style.transform = 'scaleX(' + (height > 0 ? Math.min(top / height, 1) : 0) + ')';
+    (function(){
+      var h=document.querySelector('[data-site-header]'),t=document.querySelector('.menu-toggle');
+      var n=document.getElementById('site-navigation'),p=document.querySelector('.reading-progress span');
+      function update(){
+        var top=window.scrollY||document.documentElement.scrollTop;
+        var height=document.documentElement.scrollHeight-window.innerHeight;
+        h.classList.toggle('is-scrolled',top>12);
+        p.style.transform='scaleX('+(height>0?Math.min(top/height,1):0)+')';
       }
-      toggle.addEventListener('click', function () {
-        var open = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!open));
-        toggle.setAttribute('aria-label', open ? '打开导航菜单' : '关闭导航菜单');
-        nav.classList.toggle('is-open', !open);
+      t.addEventListener('click',function(){
+        var open=t.getAttribute('aria-expanded')==='true';
+        t.setAttribute('aria-expanded',String(!open));
+        n.classList.toggle('is-open',!open);
       });
-      nav.addEventListener('click', function (event) {
-        if (event.target.tagName === 'A') {
-          toggle.setAttribute('aria-expanded', 'false');
-          nav.classList.remove('is-open');
-        }
-      });
-      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('scroll',update,{passive:true});
       update();
     }());
   </script>

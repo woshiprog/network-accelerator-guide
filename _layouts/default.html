@@ -1,35 +1,130 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'zh-CN' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'zh-CN' }}">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BGKXB89FFL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BGKXB89FFL');
-</script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | escape }}">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#157878">
+  <meta name="theme-color" content="#171a18">
 
-  <link rel="stylesheet" href="https://woshiprog.github.io/network-accelerator-guide/assets/css/style.css">
+  {% assign canonical_url = site.url | append: site.baseurl | append: page.url | replace: 'index.html', '' %}
+  {% assign page_title = page.title | default: site.title %}
+  {% assign page_description = page.description | default: site.description %}
+  <title>{{ page_title }}{% unless page_title == site.title %} | {{ site.title }}{% endunless %}</title>
+  <meta name="description" content="{{ page_description | escape }}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:title" content="{{ page_title | escape }}">
+  <meta property="og:description" content="{{ page_description | escape }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/network-accelerator-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.github.build_revision | default: '1' }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": {{ page_title | jsonify }},
+    "description": {{ page_description | jsonify }},
+    "url": {{ canonical_url | jsonify }},
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": {{ site.title | jsonify }},
+      "url": {{ site.url | append: site.baseurl | append: '/' | jsonify }}
+    }
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BGKXB89FFL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BGKXB89FFL');
+  </script>
 </head>
-<body>
-  <main class="container-lg px-3 my-5 markdown-body">
-    <p>
-      <a href="{{ site.url }}{{ site.baseurl }}/"><strong>网络加速器指南首页</strong></a>
-    </p>
 
-    <hr>
+<body class="{% if page.url == '/' %}home{% else %}article-page{% endif %}">
+  <a class="skip-link" href="#main-content">跳到正文</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
 
-    {{ content }}
+  <header class="site-header" data-site-header>
+    <div class="header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="网络加速器指南首页">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span class="brand-copy">
+          <strong>网络加速器指南</strong>
+          <small>连接、测试与排查</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="打开导航菜单">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-navigation" aria-label="主要导航">
+        <a href="{{ '/huyue-how-to-use.html' | relative_url }}">新手使用</a>
+        <a href="{{ '/huyue-download.html' | relative_url }}">下载检查</a>
+        <a href="{{ '/huyue-accelerator-safe.html' | relative_url }}">安全指南</a>
+        <a href="{{ '/game-accelerator.html' | relative_url }}">游戏连接</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main" id="main-content">
+    <article class="content-body">{{ content }}</article>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="footer-brand" href="{{ '/' | relative_url }}">网络加速器指南</a>
+        <p>从下载检查到真实场景测试，帮你更清楚地判断连接工具是否适合自己的网络环境。</p>
+      </div>
+      <nav aria-label="页脚导航">
+        <a href="{{ '/video-accelerator.html' | relative_url }}">视频访问</a>
+        <a href="{{ '/social-app-accelerator.html' | relative_url }}">社交软件</a>
+        <a href="{{ '/remote-work-network.html' | relative_url }}">远程办公</a>
+        <a href="{{ '/cross-border-network.html' | relative_url }}">跨境业务</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">实际连接效果因地区、运营商、设备和时间段而异。使用相关服务前，请遵守所在地法律及服务条款。</div>
+  </footer>
+
+  <script>
+    (function () {
+      var header = document.querySelector('[data-site-header]');
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-navigation');
+      var progress = document.querySelector('.reading-progress span');
+      function update() {
+        var top = window.scrollY || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - window.innerHeight;
+        header.classList.toggle('is-scrolled', top > 12);
+        progress.style.transform = 'scaleX(' + (height > 0 ? Math.min(top / height, 1) : 0) + ')';
+      }
+      toggle.addEventListener('click', function () {
+        var open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        toggle.setAttribute('aria-label', open ? '打开导航菜单' : '关闭导航菜单');
+        nav.classList.toggle('is-open', !open);
+      });
+      nav.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') {
+          toggle.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('is-open');
+        }
+      });
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    }());
+  </script>
 </body>
 </html>

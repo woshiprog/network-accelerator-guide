@@ -120,8 +120,8 @@
 
 相关阅读：
 
-- [虎跃加速器：游戏、视频、社交和跨境办公场景介绍](huyue-accelerator.md)
-- [虎跃加速器怎么下载？官网入口、安装步骤和使用建议](huyue-download.md)
+- [虎跃加速器：游戏、视频、社交和跨境办公场景介绍](huyue-accelerator.html)
+- [虎跃加速器怎么下载？官网入口、安装步骤和使用建议](huyue-download.html)
 
 官网入口：
 
@@ -234,9 +234,9 @@
 
 ## 相关阅读
 
-- [返回网络加速器指南首页](index.md)
-- [虎跃加速器：游戏、视频、社交和跨境办公场景介绍](huyue-accelerator.md)
-- [虎跃加速器怎么下载？官网入口、安装步骤和使用建议](huyue-download.md)
-- [游戏加速器怎么选？外服游戏延迟、丢包和掉线处理指南](game-accelerator.md)
-- [社交软件连接慢怎么办？图片、语音和视频加载优化指南](social-app-accelerator.md)
-- [远程办公网络不稳定怎么办？跨境办公连接优化指南](remote-work-network.md)
+- [返回网络加速器指南首页](./)
+- [虎跃加速器：游戏、视频、社交和跨境办公场景介绍](huyue-accelerator.html)
+- [虎跃加速器怎么下载？官网入口、安装步骤和使用建议](huyue-download.html)
+- [游戏加速器怎么选？外服游戏延迟、丢包和掉线处理指南](game-accelerator.html)
+- [社交软件连接慢怎么办？图片、语音和视频加载优化指南](social-app-accelerator.html)
+- [远程办公网络不稳定怎么办？跨境办公连接优化指南](remote-work-network.html)

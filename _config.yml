@@ -10,3 +10,53 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      path: "index.md"
+    values:
+      title: "虎跃加速器与网络加速器使用指南"
+      description: "从下载来源、安全检查、安装使用到游戏、视频、社交软件、远程办公和跨境网络场景，帮助中文用户测试并判断网络加速工具。"
+  - scope:
+      path: "huyue-accelerator.md"
+    values:
+      title: "虎跃加速器：游戏、视频、社交和跨境办公场景介绍"
+      description: "介绍虎跃加速器的常见使用场景、连接测试重点、设备与付费检查项目，帮助用户根据自己的网络环境作出判断。"
+  - scope:
+      path: "huyue-download.md"
+    values:
+      title: "虎跃加速器怎么下载？官网入口、安装步骤和使用建议"
+      description: "虎跃加速器下载与安装指南，说明来源核验、文件发布者、应用权限、安装步骤和首次连接前的安全检查。"
+  - scope:
+      path: "huyue-how-to-use.md"
+    values:
+      title: "虎跃加速器怎么用？新手安装、节点选择和常见问题"
+      description: "虎跃加速器新手使用教程，包括来源核对、客户端安装、线路选择、连接测试及常见故障排查方法。"
+  - scope:
+      path: "huyue-accelerator-safe.md"
+    values:
+      title: "虎跃加速器安全吗？下载来源、隐私风险和使用注意事项"
+      description: "从下载来源、应用权限、隐私说明、账号保护和付费规则等方面，说明虎跃加速器使用前应完成的安全检查。"
+  - scope:
+      path: "game-accelerator.md"
+    values:
+      title: "游戏加速器怎么选？外服游戏延迟、丢包和掉线处理指南"
+      description: "从延迟、丢包、抖动、服务器地区和晚高峰稳定性等方面，说明游戏加速器的测试与选择方法。"
+  - scope:
+      path: "video-accelerator.md"
+    values:
+      title: "视频加载慢怎么办？视频访问和播放稳定性优化指南"
+      description: "排查视频加载慢、缓冲和清晰度下降问题，了解带宽、Wi-Fi、设备、时间段与线路稳定性的影响。"
+  - scope:
+      path: "social-app-accelerator.md"
+    values:
+      title: "社交软件连接慢怎么办？图片、语音和视频加载优化指南"
+      description: "针对社交软件消息、图片、语音和视频连接缓慢，提供网络范围判断、线路测试和稳定性排查步骤。"
+  - scope:
+      path: "remote-work-network.md"
+    values:
+      title: "远程办公网络不稳定怎么办？跨境办公连接优化指南"
+      description: "面向远程办公场景，排查视频会议、文件传输、海外网站和企业系统连接不稳定的问题。"
+  - scope:
+      path: "cross-border-network.md"
+    values:
+      title: "外贸和跨境电商网络访问指南：海外网站、客户沟通和工具连接"
+      description: "为外贸和跨境电商用户提供海外网站、客户沟通、平台后台与在线工具的连接测试和安全建议。"

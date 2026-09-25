@@ -6,31 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171a18">
 
-  {% assign canonical_url = site.url | append: site.baseurl | append: page.url | replace: 'index.html', '' %}
+  {% assign canonical_path = page.url | replace: 'index.html', '' %}
+  {% assign canonical_url = canonical_path | absolute_url %}
   {% assign page_title = page.title | default: site.title %}
   {% assign page_description = page.description | default: site.description %}
   <title>{{ page_title }}{% unless page_title == site.title %} | {{ site.title }}{% endunless %}</title>
   <meta name="description" content="{{ page_description | escape }}">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  {% if page.noindex %}<meta name="robots" content="noindex,follow">{% else %}<meta name="robots" content="index,follow,max-image-preview:large">{% endif %}
   <link rel="canonical" href="{{ canonical_url }}">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
+  <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.title | escape }}">
   <meta property="og:title" content="{{ page_title | escape }}">
   <meta property="og:description" content="{{ page_description | escape }}">
   <meta property="og:url" content="{{ canonical_url }}">
-  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/network-accelerator-hero.webp">
+  <meta property="og:image" content="{{ '/assets/images/network-accelerator-hero.webp' | absolute_url }}">
+  <meta property="og:image:alt" content="网络加速器指南">
   <meta name="twitter:card" content="summary_large_image">
+  {% if page.url == '/' %}<link rel="preload" as="image" href="{{ '/assets/images/network-accelerator-hero.webp' | relative_url }}" fetchpriority="high">{% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.github.build_revision | default: '1' }}">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": {{ page_title | jsonify }},
-    "description": {{ page_description | jsonify }},
-    "url": {{ canonical_url | jsonify }},
-    "inLanguage": "zh-CN"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": {{ site.url | append: site.baseurl | append: '/#website' | jsonify }},
+        "url": {{ site.url | append: site.baseurl | append: '/' | jsonify }},
+        "name": {{ site.title | jsonify }},
+        "inLanguage": "zh-CN"
+      },
+      {
+        "@type": "WebPage",
+        "@id": {{ canonical_url | append: '#webpage' | jsonify }},
+        "url": {{ canonical_url | jsonify }},
+        "name": {{ page_title | jsonify }},
+        "description": {{ page_description | jsonify }},
+        "isPartOf": {"@id": {{ site.url | append: site.baseurl | append: '/#website' | jsonify }}},
+        "inLanguage": "zh-CN"{% if page.last_modified_at %},
+        "dateModified": {{ page.last_modified_at | jsonify }}{% endif %}
+      }
+    ]
   }
   </script>
 
@@ -42,7 +59,6 @@
     gtag('config','G-BGKXB89FFL');
   </script>
 </head>
-
 <body class="{% if page.url == '/' %}home{% else %}article-page{% endif %}">
   <a class="skip-link" href="#main-content">跳到正文</a>
   <div class="reading-progress" aria-hidden="true"><span></span></div>
@@ -53,15 +69,14 @@
         <span class="brand-mark" aria-hidden="true">N</span>
         <span class="brand-copy"><strong>网络加速器指南</strong><small>连接、测试与排查</small></span>
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false"
-              aria-controls="site-navigation" aria-label="打开导航菜单">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="打开导航菜单">
         <span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="site-navigation" aria-label="主要导航">
-        <a href="{{ '/huyue-how-to-use.html' | relative_url }}">新手使用</a>
-        <a href="{{ '/huyue-download.html' | relative_url }}">下载检查</a>
-        <a href="{{ '/huyue-accelerator-safe.html' | relative_url }}">安全指南</a>
-        <a href="{{ '/game-accelerator.html' | relative_url }}">游戏连接</a>
+        <a href="{{ '/huyue-accelerator.html' | relative_url }}">虎跃指南</a>
+        <a href="{{ '/huyue-download.html' | relative_url }}">下载</a>
+        <a href="{{ '/huyue-how-to-use.html' | relative_url }}">使用</a>
+        <a href="{{ '/' | relative_url }}#task-map">问题导航</a>
       </nav>
     </div>
   </header>
@@ -74,16 +89,17 @@
     <div class="footer-inner">
       <div>
         <a class="footer-brand" href="{{ '/' | relative_url }}">网络加速器指南</a>
-        <p>从下载检查到真实场景测试，帮你判断连接工具是否适合自己的网络环境。</p>
+        <p>第三方中文指南。本站不是虎跃加速器官方网站，不代表产品方作效果保证；涉及产品功能时优先引用公开资料，并把实际效果留给用户在自己的网络环境中验证。</p>
       </div>
       <nav aria-label="页脚导航">
-        <a href="{{ '/video-accelerator.html' | relative_url }}">视频访问</a>
-        <a href="{{ '/social-app-accelerator.html' | relative_url }}">社交软件</a>
+        <a href="{{ '/huyue-accelerator-safe.html' | relative_url }}">安全检查</a>
         <a href="{{ '/remote-work-network.html' | relative_url }}">远程办公</a>
         <a href="{{ '/cross-border-network.html' | relative_url }}">跨境业务</a>
+        <a href="{{ '/about.html' | relative_url }}">关于本站</a>
+        <a href="{{ '/contact.html' | relative_url }}">联系与纠错</a>
       </nav>
     </div>
-    <div class="footer-bottom">实际连接效果因地区、运营商、设备和时间段而异。使用相关服务前，请遵守所在地法律及服务条款。</div>
+    <div class="footer-bottom">最后更新：{{ page.last_modified_at | default: '2026-09-25' }}。实际连接效果受地区、运营商、设备、节点状态和目标服务影响；使用相关服务时请遵守当地法律、单位安全要求及第三方平台条款。</div>
   </footer>
 
   <script>

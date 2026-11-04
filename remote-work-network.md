@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 
 # 远程办公网络不稳定怎么办？会议、上传与备用网络检查
@@ -24,12 +25,22 @@
 6. 如果已开启 VPN/加速工具，做一次关闭后的对照；
 7. 准备手机热点或第二网络作为备用。
 
-Google Meet 官方排障建议中明确提到，在视频质量问题时可以临时停用 VPN 做对照，因为额外网络路径可能增加延迟。Microsoft Teams 也提供 Call health，用于查看 RTT、抖动、丢包、码率等指标。
+Google Meet 官方排障建议中明确提到，在视频质量问题时可以临时停用 VPN 做对照，因为额外网络路径可能增加延迟。Microsoft Teams 也提供 Call health（通话运行状况）：在会议中打开“更多操作”→“设置”→“通话运行状况”，可查看往返时间、丢包等实时指标。菜单名称会随语言和客户端版本变化。
 
 官方参考：
 
 - [Google Meet 网络和视频质量排查](https://support.google.com/meet/answer/10620583?hl=zh-Hans)
 - [Microsoft Teams 查看通话和会议质量](https://support.microsoft.com/en-us/teams/meetings/monitor-call-and-meeting-quality-in-microsoft-teams)
+
+## Teams 通话运行状况怎么读？
+
+如果在会议中打开了 Call health，先看网络区域的 **Roundtrip time（往返时间）** 和 **Received packet loss（接收丢包率）**，再看音频的 **Received jitter（抖动）**。Microsoft 的参考说明给出：往返时间通常应低于 200 ms，接收丢包率通常低于 2%，音频接收抖动通常低于 30 ms。这些是诊断参考而不是保证通话正常的硬阈值；设备性能与服务端问题也会影响体验。
+
+如果会议中数据突然恶化，可以先暂停云同步、换稳定网络，观察指标是否同步改善。参考：[Microsoft Teams 通话质量与指标说明](https://support.microsoft.com/en-us/teams/meetings/monitor-call-and-meeting-quality-in-microsoft-teams)。
+
+## 会议正在卡顿时怎么处理？
+
+如果别人说听不清你的声音，先关掉云同步和上传任务，并暂时关闭摄像头看看语音能否稳定。若只有你的声音断续，尤其要检查上行；如果只有你听不清对方，则更值得检查下行、扬声器与连接质量。会议软件提供的通话健康指标可以帮助排除单纯的麦克风故障。
 
 ## 为什么上行速度比很多人想象的重要？
 

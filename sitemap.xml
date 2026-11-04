@@ -7,11 +7,13 @@ sitemap: false
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {% assign sitemap_pages = site.pages | sort: "url" %}
 {% for p in sitemap_pages %}
+  {% if p.layout == 'default' %}
   {% unless p.noindex or p.sitemap == false %}
   <url>
     <loc>{{ p.url | absolute_url | xml_escape }}</loc>{% if p.last_modified_at %}
     <lastmod>{{ p.last_modified_at | date: "%Y-%m-%d" }}</lastmod>{% endif %}
   </url>
   {% endunless %}
+  {% endif %}
 {% endfor %}
 </urlset>

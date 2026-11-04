@@ -1,30 +1,61 @@
 ---
+layout: default
 ---
 
 # 虎跃加速器怎么用？连接、线路选择与常见故障
 
-如果你已经安装完成，这页只解决三个问题：**怎么连、怎么选模式/线路、连接异常时先查什么。** 根据本站收录的真实客户端截图，虎跃首页中央有“点击连接”按钮，线路区域显示“智选最优线路”，底部包含“连接”“设置VPN”“官方服务”“我的”等入口。
+安装完成后，打开虎跃客户端，可以在首页看到“点击连接”和线路选择入口。以下以 **Android 客户端界面**为例，按第一次打开、登录、选择节点、授权、连接成功的顺序说明操作。其他系统和新版客户端的按钮位置可能不同。
 
-<figure class="product-shot">
-  <img src="{{ '/assets/images/huyue-app-home.webp' | relative_url }}" width="576" height="1280" loading="lazy" decoding="async" alt="虎跃加速器移动端真实首页截图，中央为点击连接按钮，下方显示智选最优线路，底部有连接、设置VPN、官方服务和我的导航">
-  <figcaption>虎跃加速器移动端真实客户端界面。界面会随版本变化，当前客户端以实际显示为准。</figcaption>
-</figure>
+## Android 首次连接：五个画面看懂操作
 
-## 第一次连接：按这 7 步做
+<div class="app-screenshot-grid">
+  <figure class="app-screenshot">
+    <a href="{{ '/assets/images/huyue-android-first-open.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="放大查看虎跃首次打开界面截图">
+      <img src="{{ '/assets/images/huyue-android-first-open.webp' | relative_url }}" width="576" height="1280" loading="lazy" decoding="async" alt="虎跃加速器 Android 首次打开界面，中央显示点击连接，下方显示请选择节点以及创建账号和登录入口">
+    </a>
+    <figcaption><strong>1. 首次打开</strong>：可看到“创建账号”“登录”和“请选择节点”，先按需要完成账号操作。</figcaption>
+  </figure>
+  <figure class="app-screenshot">
+    <a href="{{ '/assets/images/huyue-android-home.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="放大查看虎跃登录后界面截图">
+      <img src="{{ '/assets/images/huyue-android-home.webp' | relative_url }}" width="576" height="1280" loading="lazy" decoding="async" alt="虎跃加速器 Android 登录后首页，中央点击连接，下方已选择中国香港节点，底部有连接、设置VPN、官方服务、我的">
+    </a>
+    <figcaption><strong>2. 登录后首页</strong>：点击线路区域可以切换节点；会员剩余天数是截图中的账户状态，不代表当前套餐权益。</figcaption>
+  </figure>
+  <figure class="app-screenshot">
+    <a href="{{ '/assets/images/huyue-android-nodes.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="放大查看虎跃节点列表截图">
+      <img src="{{ '/assets/images/huyue-android-nodes.webp' | relative_url }}" width="576" height="1280" loading="lazy" decoding="async" alt="虎跃加速器 Android 线路选择界面，顶部有智能连接与自选线路，列表展示专属节点、智选最优线路、中国香港、美国、日本、韩国等选项">
+    </a>
+    <figcaption><strong>3. 选择线路</strong>：界面有“智能连接”“自选线路”等入口。部分节点或线路显示会员限制。</figcaption>
+  </figure>
+  <figure class="app-screenshot">
+    <a href="{{ '/assets/images/huyue-android-vpn-permission.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="放大查看系统 VPN 授权截图">
+      <img src="{{ '/assets/images/huyue-android-vpn-permission.webp' | relative_url }}" width="576" height="1280" loading="lazy" decoding="async" alt="Android 系统网络连接请求弹窗，虎跃加速器请求设置 VPN 连接，提供取消与确定按钮">
+    </a>
+    <figcaption><strong>4. 系统授权</strong>：首次连接可能弹出 Android VPN 请求。只在确认应用来源且自己主动发起连接时选择“确定”。</figcaption>
+  </figure>
+  <figure class="app-screenshot">
+    <a href="{{ '/assets/images/huyue-android-connected.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="放大查看虎跃连接成功截图">
+      <img src="{{ '/assets/images/huyue-android-connected.webp' | relative_url }}" width="576" height="1280" loading="lazy" decoding="async" alt="虎跃加速器 Android 连接成功界面，中央显示已连接和计时，手机状态栏可见 VPN 标识">
+    </a>
+    <figcaption><strong>5. 连接成功</strong>：首页出现“已连接”与计时，状态栏显示 VPN 标识。接着打开需要使用的应用检查效果。</figcaption>
+  </figure>
+</div>
 
-1. 先断开其他 VPN/代理，确认原网络本身能正常上网；
-2. 打开虎跃客户端；
-3. 保持“智选最优线路”，或进入线路选择页选一个目标地区；
-4. 点击首页中央“点击连接”；
-5. 移动端首次连接时，确认系统 VPN / 网络连接请求来自虎跃；
-6. 等待客户端显示连接状态；
-7. 打开你真正要使用的应用做测试。
+<small class="screenshot-note">截图展示的是某一版本 Android 客户端的界面；会员剩余天数、可用节点和解锁数量可能因账号、版本和时间而不同。点击图片可放大查看。</small>
 
-官方 Windows FAQ 给出的连接成功判断包括：连接按钮附近显示连接时间，或手机顶部出现“钥匙”/“VPN”图标。**连接成功只代表隧道建立，不代表速度一定更快。**
+### 实际操作顺序
+
+1. 确认手机本身能正常上网，再打开虎跃；如出现登录页，可按实际账号情况选择登录或创建账号。
+2. 点击首页的节点选择区域。在截图对应的版本中，线路页可切换“智能连接”和“自选线路”；未解锁的节点不一定可选。
+3. 返回首页，点击中央“点击连接”。
+4. 首次连接弹出系统 VPN 授权时，核对应用名称和来源；确认是自己发起的请求后再授权。
+5. 等到界面显示“已连接”，检查状态栏 VPN 图标，然后打开目标应用验证能否正常使用。
+
+**“已连接”表示客户端报告连接成功，并不等于已经验证网络速度、隐私安全或所有网站都可访问。** 如果持续停留在“连接中”，先检查原网络，再断开并尝试其他可用节点。
 
 ## 智能模式、定制模式、智能加速、全局代理怎么区分？
 
-根据官方 Windows FAQ：
+**注意区分设备界面：**上面 Android 截图中的“智能连接 / 自选线路”属于线路选择入口；下面的“智能模式 / 定制模式”“智能加速 / 全局代理”来自产品方 Windows 使用说明，不能据此断言安卓客户端提供完全相同的开关。前一组主要解决选线路，后一组主要决定哪些流量走代理。
 
 | 模式 | 官方说明 | 更适合的用法 |
 |---|---|---|
@@ -59,7 +90,7 @@
 - 文件：上传是否能持续完成；
 - 网页/后台：同一目标服务是否稳定完成登录、编辑、保存等动作。
 
-判断效果时应保留可复现的测试记录；没有数据支撑时，不用具体的延迟下降或速度提升数字作结论。
+一次测试可能遇到临时波动。重要任务最好在另一个时间段再试一次，不要只凭节点列表中的数字作决定。
 
 ## 连接不上：按症状处理
 
@@ -68,21 +99,52 @@
 | 一直连接中 | 原网络、当前线路 | 断开后换节点再试 |
 | 显示已连接但没网 | 原网、模式、系统代理 | 先断开确认原网正常，再换模式/节点 |
 | 连接后变慢 | 节点距离、负载、晚高峰 | 换节点，并在另一个时间段复测 |
-| Windows 提示网卡/驱动失败 | 官方网络代理驱动 | 按官方 FAQ 重新安装 Windows 安装版 |
+| Windows 提示网卡/驱动失败 | 官方网络代理驱动 | 先检查驱动提示与系统权限，再尝试下载页的 Windows 安装版 |
 | 某个应用正常，另一个异常 | 智能加速规则、应用本身 | 对照智能加速/全局代理并检查应用状态 |
 | 经常断开 | Wi-Fi、休眠/省电、网络切换 | 先稳定本地网络再测线路 |
 
-官方 Windows FAQ 还说明：连接后无网络或网速慢时，可先切换其他地区节点；如果使用“智能加速”，可关闭后用全局代理做对照。
+产品方 Windows 使用说明还提到：连接后无网络或网速慢时，可先切换其他地区节点；如果 Windows 客户端提供“智能加速”选项，可关闭后用全局代理做对照。Android 用户优先使用自己界面中实际存在的功能。
+
+## Windows 连接成功却无法上网：先恢复原网络
+
+1. 断开客户端连接，再确认浏览器能否正常打开普通网站。如果断开后也无法访问，应先排查本机 Wi-Fi、DNS 或宽带。
+2. 如果断开就恢复，重新打开客户端，仅换一条可用线路进行对照。
+3. 如 Windows 客户端确有“智能加速”开关，可在确认本地网络正常后比较开启与关闭的区别；不要把 Android 的“智能连接”当成相同设置。
+4. 如果有“网络适配器或驱动安装失败”的明确提示，再考虑重新安装从下载页取得的 Windows 安装版。安装前保存工作并关闭旧的冲突网络工具；不要下载第三方所谓“修复驱动”。
+
+如果更换线路和模式后仍然不通，记录 Windows 版本、客户端版本、错误提示和断开后网络是否恢复。**不建议通过永久关闭防火墙或杀毒软件来排障。**
+
+## Android 连上几分钟后又断开：先看后台运行限制
+
+如果刚连接时能用，切到其他应用几分钟后又断开，尤其是顶部 VPN 图标消失或客户端提示“异常断开”，不一定是节点故障。先检查手机是否在省电模式下限制了应用的后台运行。
+
+1. 打开系统设置，进入**应用管理 → 虎跃 → 电池/后台活动**（不同品牌的名称可能不同）。
+2. 查看是否开启了“限制后台活动”“自动清理”或类似选项。只为可信且需要持续连接的应用调整相关限制。
+3. 重新连接后，锁屏几分钟再解锁，查看 VPN 状态是否仍保持；对比开启和关闭省电模式后的结果。
+4. 如果 VPN 图标一直存在但目标应用仍无法访问，应回到线路、DNS 或模式检查，不能一概归因于后台清理。
+
+产品方另有[Android 断连说明](https://huyuejsq.co/Android-zong.html)，其中列出了若干品牌的后台管理入口。安卓系统版本差异很大，以自己手机的实际菜单为准。
 
 ## 游客模式和多设备
 
-官方 Windows FAQ 说明，首次下载使用时可在游客模式获得免费试用时长；同一账号可以在电脑、Android、iPhone、平板等设备间切换。若需要多个设备同时在线，在线数取决于购买时选择的套餐配置。
+产品方使用资料介绍过游客模式试用，以及电脑、Android、iPhone、平板之间切换账号的用法。**是否仍提供试用、试用多久及同时在线数**，需要以你打开客户端时显示的实际规则为准，不能把旧教程中的权益当成现行承诺。
 
 套餐、试用和价格都属于时效信息，实际以当前客户端和购买页面为准。
 
-## 官方帮助与下一步
+## 已连接却打不开网页：用三次对照缩小范围
 
-- [虎跃帮助页](https://huyuejsq.co/course.html)
-- [Windows 常见问题](https://huyuejsq.co/faq/windows.html)
+**第一步，断开连接。** 原网络能打开普通网站吗？如果也打不开，优先修本地 Wi-Fi、DNS 或宽带，别继续反复换节点。
 
-还没安装，回到[下载指南](huyue-download.html)；担心权限、日志或隐私，进入[安全检查](huyue-accelerator-safe.html)；连接成功但游戏、视频或会议仍有问题，则进入对应场景页继续排查。
+**第二步，只切换线路。** 保持原设备与连接模式不变，换一条线路，再访问刚才失败的同一个网站。如果只有个别线路异常，更可能是线路到目标服务之间的问题。
+
+**第三步，才比较模式。** 对照智能加速和全局代理；如果全局代理导致本地设备或企业网站无法访问，应改回原模式。检查时不要绕过单位的网络管理要求。
+
+如果三次对照都无效，记录**设备系统、应用版本、发生时间、具体错误提示和已做过的步骤**，再联系产品方。不要发送账号密码、验证码或涉及隐私的完整日志。
+
+## 遇到错误提示时先做什么
+
+- **已连接但网页打不开：** 先断开看原网络是否恢复，再检查系统代理、DNS 和智能/全局模式。
+- **Windows 显示驱动错误：** 退出其他网络代理工具，重启后尝试官网提供的安装版；必要时联系官方客服。
+- **打开企业网站后反复登录：** 恢复公司允许的连接方式，不要绕过单位 VPN 或设备管理要求。
+
+Android 连接后几分钟中断，可参考[后台运行设置说明](https://huyuejsq.co/Android-zong.html)。还没安装，回到[下载指南](huyue-download.html)；担心权限、日志或隐私，进入[安全检查](huyue-accelerator-safe.html)；连接成功但游戏、视频或会议仍有问题，则进入对应场景页继续排查。

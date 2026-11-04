@@ -1,63 +1,79 @@
 ---
+layout: default
 ---
 
-<section class="home-hero" markdown="1">
-
-# 网络加速器指南：先判断问题，再选择工具
-
-如果你正在了解虎跃加速器，或者遇到游戏延迟、视频缓冲、社交软件连接、远程会议、跨境业务后台等问题，先别急着换节点。这个站的作用是先帮你判断问题发生在哪一层，再把你带到对应的排查页。
-
-本站是第三方中文指南，不是虎跃加速器官方网站。产品功能以公开资料和虎跃官方介绍为基础；速度、延迟、服务可用性和稳定性这类必须实测的结果，不用未经验证的数据替你下结论。
-
+<section class="home-hero" aria-labelledby="home-title">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">下载、连接与排查，一站找到对应指南</p>
+    <h1 id="home-title">网络加速器指南</h1>
+    <p class="hero-lead">虎跃加速器下载、安装与使用教程，以及游戏延迟、视频缓冲、会议卡顿等常见网络问题的排查方法。</p>
+    <div class="hero-actions">
+      <a class="home-btn home-btn-primary" href="{{ '/huyue-download.html' | relative_url }}">虎跃下载与安装 <span aria-hidden="true">↗</span></a>
+      <a class="home-btn home-btn-secondary" href="{{ '/huyue-how-to-use.html' | relative_url }}">查看使用教程 <span aria-hidden="true">→</span></a>
+    </div>
+    <p class="hero-note">选择适合设备的安装入口，连接前确认应用名称与发布者。</p>
+  </div>
 </section>
 
-<span id="task-map"></span>
+<section class="home-section" id="task-map" aria-labelledby="task-heading">
+  <div class="home-section-heading">
+    <div>
+      <p class="section-kicker">按需求直达</p>
+      <h2 id="task-heading">你现在想解决什么？</h2>
+    </div>
+    <p class="section-intro">不用从头阅读全部教程，选择最接近的情况即可。</p>
+  </div>
+  <div class="home-guide-grid">
+    <a class="home-guide-card" href="{{ '/huyue-download.html' | relative_url }}">
+      <span class="card-icon" aria-hidden="true">↓</span><span class="card-title">下载与安装 <span aria-hidden="true">↗</span></span>
+      <span class="card-desc">Windows、Android、iPhone/iPad、Mac 下载入口与安装注意事项。</span>
+    </a>
+    <a class="home-guide-card" href="{{ '/huyue-how-to-use.html' | relative_url }}">
+      <span class="card-icon" aria-hidden="true">◎</span><span class="card-title">连接与设置 <span aria-hidden="true">↗</span></span>
+      <span class="card-desc">第一次连接、切换线路、选择模式，以及连接不上时如何处理。</span>
+    </a>
+    <a class="home-guide-card" href="{{ '/huyue-accelerator.html' | relative_url }}">
+      <span class="card-icon" aria-hidden="true">?</span><span class="card-title">虎跃加速器怎么样 <span aria-hidden="true">↗</span></span>
+      <span class="card-desc">了解功能、支持设备、适用场景与使用限制，再决定是否尝试。</span>
+    </a>
+    <a class="home-guide-card" href="{{ '/huyue-accelerator-safe.html' | relative_url }}">
+      <span class="card-icon" aria-hidden="true">✓</span><span class="card-title">安全与隐私 <span aria-hidden="true">↗</span></span>
+      <span class="card-desc">检查下载来源、VPN 权限、隐私声明和账号支付风险。</span>
+    </a>
+  </div>
+</section>
 
-## 30 秒找到你该看的页面
+<section class="home-section home-scenarios" aria-labelledby="scene-heading">
+  <div class="home-section-heading">
+    <div>
+      <p class="section-kicker">按症状排查</p>
+      <h2 id="scene-heading">哪里不稳定，就从哪里查</h2>
+    </div>
+    <p class="section-intro">不同应用需要观察的指标不同，不一定都是“换个节点”就能解决。</p>
+  </div>
+  <div class="home-scenario-grid">
+    <a href="{{ '/game-accelerator.html' | relative_url }}" class="home-scenario-link"><span><strong>游戏高延迟、瞬移、掉线</strong><small>分清 Ping、丢包与画面掉帧</small></span><span aria-hidden="true">→</span></a>
+    <a href="{{ '/video-accelerator.html' | relative_url }}" class="home-scenario-link"><span><strong>视频加载中、缓冲或 0 kbps</strong><small>排查播放器、持续网速与连接线路</small></span><span aria-hidden="true">→</span></a>
+    <a href="{{ '/social-app-accelerator.html' | relative_url }}" class="home-scenario-link"><span><strong>社交软件消息或通话异常</strong><small>区分通知延迟、媒体加载和语音卡顿</small></span><span aria-hidden="true">→</span></a>
+    <a href="{{ '/remote-work-network.html' | relative_url }}" class="home-scenario-link"><span><strong>远程会议与文件上传不稳定</strong><small>检查上行、实时通话和企业网络规则</small></span><span aria-hidden="true">→</span></a>
+    <a href="{{ '/cross-border-network.html' | relative_url }}" class="home-scenario-link"><span><strong>跨境业务后台无法正常操作</strong><small>排查登录验证、保存失败和上传中断</small></span><span aria-hidden="true">→</span></a>
+  </div>
+</section>
 
-| 你现在的问题 | 最先确认 | 直接进入 |
-|---|---|---|
-| 不知道虎跃能做什么 | 平台、节点、多设备、官方功能范围 | [虎跃加速器概览](huyue-accelerator.html) |
-| 想下载安装 | 官方入口、设备版本、文件来源 | [下载与安装](huyue-download.html) |
-| 已安装但不会连接 | 连接按钮、模式、线路、连接成功标志 | [使用教程](huyue-how-to-use.html) |
-| 担心权限或隐私 | 哪些是公开事实、哪些只是官方声明 | [安全检查](huyue-accelerator-safe.html) |
-| 外服游戏延迟、丢包、掉线 | RTT、抖动、丢包、实际对局 | [游戏网络排查](game-accelerator.html) |
-| 测速快但视频仍缓冲 | 持续吞吐、Wi-Fi、设备、平台路径 | [视频加载排查](video-accelerator.html) |
-| 消息、图片、语音或视频异常 | 通知、媒体、实时通话是否是同一种问题 | [社交软件连接排查](social-app-accelerator.html) |
-| 视频会议、上传或企业系统不稳 | 上行、实时指标、公司网络要求 | [远程办公网络](remote-work-network.html) |
-| 店铺后台、附件、客户沟通不稳 | 哪个业务动作失败，而不是只看“网站能否打开” | [跨境业务网络](cross-border-network.html) |
+<section class="home-network" aria-labelledby="network-heading">
+  <div class="network-callout-copy">
+    <p class="section-kicker">更基础的连接问题</p>
+    <h2 id="network-heading">多个网站都打不开？先检查本地网络</h2>
+    <p>如果电脑、手机或不同应用同时出现异常，先检查 Wi-Fi、路由器、DNS 和运营商连接。此类问题不一定需要加速工具。</p>
+    <a class="home-btn home-btn-dark" href="https://woshiprog.github.io/network-troubleshooting-guide/">前往网络故障排查 <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="network-callout-symbol" aria-hidden="true">⌁</div>
+</section>
 
-## 先判断：问题是不是出在本地网络？
-
-出现下面任一情况时，先解决基础网络，通常比继续换加速节点更有效：
-
-- 所有网站和应用都慢，而不是只有某个目标服务慢；
-- 离路由器远时明显变差，靠近后恢复；
-- 同一 Wi-Fi 下多台设备同时异常；
-- 有线连接正常而 Wi-Fi 不稳定；
-- 设备本身掉帧、浏览器异常或系统网络设置有问题；
-- 只有单个应用异常，而且该应用本身正在维护或限制账号。
-
-如果本地网络基本正常，而问题只集中在特定跨区、跨境或目标服务路径，再测试线路类工具更有意义。
-
-## 不同任务看不同指标
-
-| 指标 | 更常影响什么 | 典型体感 |
-|---|---|---|
-| 延迟（RTT） | 游戏、语音、会议 | 操作响应慢、对话等待明显 |
-| 抖动（Jitter） | 游戏、实时语音视频 | 延迟忽高忽低、声音断续 |
-| 丢包（Packet loss） | 游戏、会议、实时通信 | 瞬移、卡顿、语音缺字、画面冻结 |
-| 持续吞吐 | 视频、大文件 | 缓冲、自动降清晰度、上传很慢 |
-| 稳定性 | 所有长时间任务 | 一开始正常，过一会儿断线或变慢 |
-
-测试时尽量固定设备、网络、应用、目标区服和时间段，一次只改变一个条件。否则即使结果变好，也很难知道到底是节点、模式还是原网络波动造成的。
-
-## 本站怎么处理产品信息？
-
-虎跃的设备支持、节点、多设备、隐私等产品信息集中在[虎跃加速器概览](huyue-accelerator.html)和[安全检查](huyue-accelerator-safe.html)。首页只负责帮你分流，不重复展开产品参数。
-
-本站把信息分成三类：**公开可核实信息、产品方官方介绍、必须通过实际测试才能判断的结果**。涉及延迟、速度、晚高峰稳定性或某个服务在具体网络里的可用性，应以可复现测试为准，不用没有数据支撑的具体提升数字作结论。
-
-## 下一步
-
-如果你只想判断虎跃是否值得继续了解，先看[虎跃加速器是什么](huyue-accelerator.html)。如果已经准备安装，直接进入[下载与安装指南](huyue-download.html)。如果你面对的是具体网络故障，就从上面的任务表进入对应页面，不必先把所有虎跃页面读一遍。
+<section class="home-section home-check" aria-labelledby="quick-heading">
+  <div class="home-section-heading"><div><p class="section-kicker">先做这两步</p><h2 id="quick-heading">避免把问题越查越复杂</h2></div></div>
+  <div class="quick-check-grid">
+    <div><strong>先比较另一种网络</strong><p>同一设备连接手机热点后恢复正常，优先排查原来的 Wi-Fi、路由器或宽带线路。</p></div>
+    <div><strong>一次只改变一个条件</strong><p>只换节点、只换网络或只换设备，并比较同一个应用的表现，结果才更有参考价值。</p></div>
+  </div>
+</section>

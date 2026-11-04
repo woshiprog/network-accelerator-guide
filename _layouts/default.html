@@ -5,12 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171a18">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/icons/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/icons/favicon-32.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
+  <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
 
   {% assign canonical_path = page.url | replace: 'index.html', '' %}
   {% assign canonical_url = canonical_path | absolute_url %}
   {% assign page_title = page.title | default: site.title %}
   {% assign page_description = page.description | default: site.description %}
-  <title>{{ page_title }}{% unless page_title == site.title %} | {{ site.title }}{% endunless %}</title>
+  <title>{{ page_title | escape }}{% unless page_title contains site.title %} | {{ site.title | escape }}{% endunless %}</title>
   <meta name="description" content="{{ page_description | escape }}">
   {% if page.noindex %}<meta name="robots" content="noindex,follow">{% else %}<meta name="robots" content="index,follow,max-image-preview:large">{% endif %}
   <link rel="canonical" href="{{ canonical_url }}">
@@ -73,10 +77,11 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="site-navigation" aria-label="主要导航">
-        <a href="{{ '/huyue-accelerator.html' | relative_url }}">虎跃指南</a>
-        <a href="{{ '/huyue-download.html' | relative_url }}">下载</a>
-        <a href="{{ '/huyue-how-to-use.html' | relative_url }}">使用</a>
-        <a href="{{ '/' | relative_url }}#task-map">问题导航</a>
+        <a href="{{ '/huyue-accelerator.html' | relative_url }}"{% if page.url == '/huyue-accelerator.html' %} aria-current="page"{% endif %}>虎跃指南</a>
+        <a href="{{ '/huyue-download.html' | relative_url }}"{% if page.url == '/huyue-download.html' %} aria-current="page"{% endif %}>下载</a>
+        <a href="{{ '/huyue-how-to-use.html' | relative_url }}"{% if page.url == '/huyue-how-to-use.html' %} aria-current="page"{% endif %}>使用</a>
+        <a href="{{ '/' | relative_url }}#task-map">使用场景</a>
+        <a href="https://woshiprog.github.io/network-troubleshooting-guide/">网络故障排查</a>
       </nav>
     </div>
   </header>
@@ -89,7 +94,7 @@
     <div class="footer-inner">
       <div>
         <a class="footer-brand" href="{{ '/' | relative_url }}">网络加速器指南</a>
-        <p>第三方中文指南。本站不是虎跃加速器官方网站，不代表产品方作效果保证；涉及产品功能时优先引用公开资料，并把实际效果留给用户在自己的网络环境中验证。</p>
+        <p>下载、连接与网络问题排查实用指南。</p>
       </div>
       <nav aria-label="页脚导航">
         <a href="{{ '/huyue-accelerator-safe.html' | relative_url }}">安全检查</a>
@@ -99,7 +104,7 @@
         <a href="{{ '/contact.html' | relative_url }}">联系与纠错</a>
       </nav>
     </div>
-    <div class="footer-bottom">最后更新：{{ page.last_modified_at | default: '2026-09-25' }}。实际连接效果受地区、运营商、设备、节点状态和目标服务影响；使用相关服务时请遵守当地法律、单位安全要求及第三方平台条款。</div>
+    <div class="footer-bottom">{% if page.last_modified_at %}本文更新：{{ page.last_modified_at }} · {% endif %}© 2026 网络加速器指南</div>
   </footer>
 
   <script>
@@ -112,11 +117,42 @@
         h.classList.toggle('is-scrolled',top>12);
         p.style.transform='scaleX('+(height>0?Math.min(top/height,1):0)+')';
       }
-      t.addEventListener('click',function(){
-        var open=t.getAttribute('aria-expanded')==='true';
-        t.setAttribute('aria-expanded',String(!open));
-        n.classList.toggle('is-open',!open);
+      var navBreakpoint=window.matchMedia('(min-width: 941px)');
+      function isMobile(){ return !navBreakpoint.matches; }
+      function setMenu(open){
+        open=!!open && isMobile();
+        if(!open && n.contains(document.activeElement) && isMobile()) t.focus();
+        t.setAttribute('aria-expanded',String(open));
+        t.setAttribute('aria-label',open?'关闭导航菜单':'打开导航菜单');
+        n.classList.toggle('is-open',open);
+        // On mobile, hidden menu links should not be reachable by Tab.
+        n.inert=isMobile() && !open;
+      }
+      setMenu(false);
+      t.addEventListener('click',function(e){
+        var open=t.getAttribute('aria-expanded')!=='true';
+        setMenu(open);
+        // Keyboard activation of the menu immediately enters its first link.
+        if(open && e.detail===0){
+          var first=n.querySelector('a');
+          if(first) first.focus();
+        }
       });
+      n.addEventListener('click',function(e){
+        if(e.target.closest('a')) setMenu(false);
+      });
+      document.addEventListener('pointerdown',function(e){
+        if(isMobile() && n.classList.contains('is-open') && !h.contains(e.target)) setMenu(false);
+      });
+      document.addEventListener('keydown',function(e){
+        if(e.key==='Escape' && n.classList.contains('is-open')){
+          setMenu(false);
+          t.focus();
+        }
+      });
+      function resetMenu(){ setMenu(false); }
+      if(navBreakpoint.addEventListener) navBreakpoint.addEventListener('change',resetMenu);
+      else if(navBreakpoint.addListener) navBreakpoint.addListener(resetMenu);
       window.addEventListener('scroll',update,{passive:true});
       update();
     }());
